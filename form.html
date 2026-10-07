@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form ejercicio</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="nombInp"><b>Escribir tu nombre aqui:</b></label>
+        <br>
+        <input type="text" id="nombInp" placeholder="  Nombre">
+        <br>
+        <br>
+        <br>
+        <label for="apeInp"><b>Escribir tu apellido aqui:</b></label>
+        <br>
+        <input type="text" id="apeInp" placeholder="  Apellido">
+        <br>
+        <br>
+        <br>
+        <label for="Genero"><b class="sex">Seleccion su sexo:</b></label>
+        <br>
+        <input type="radio" id="Fem" value="Femenino"><b class="n">Femenino</b></input>
+        <br>
+        <input type="radio" id="Masc" value="Masculino"><b class="n">Masculino</b></input>
+        <br>
+        <br>
+        <input type="submit" value="Registrar" class="btn">
+    </form>
+</body>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: black;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    form {
+        width: 40%;
+        height: 500px;
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 2px dashed rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        padding: 40px;
+    }
+
+    form:hover {
+        border-style: solid;
+        border-color: #8CFF00;
+        box-shadow: 0 10px 25px rgba(140, 255, 0, 0.2);
+        cursor: pointer;
+    }
+
+    label {
+        color: rgb(13, 229, 99);
+    }
+
+    .n {
+        color: white;
+    }
+
+    .sex{
+        color: rgb(238, 40, 175);
+    }
+
+    input {
+        color: black;
+        font-size: 20px;
+        border-radius: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    input:hover {
+        transition: all 0.3s ease;
+        border-style: solid;
+        border-color: #51ce38;
+        box-shadow: 0 10px 25px rgba(12, 138, 96, 0.2);
+        cursor: pointer;
+    }
+
+    input::placeholder {
+        color: rgb(68, 87, 72);
+    }
+
+    .btn{
+        background-color: #35bed6;
+        color: white;
+        padding: 10px;
+        border-radius: 50px;
+        margin-bottom: auto;
+    }
+
+    .btn:hover{
+        transition: all 0.3s ease;
+        border-style: solid;
+        border-color: #50a3db;
+        box-shadow: 0 10px 25px rgba(18, 162, 76, 0.2);
+        cursor: pointer;
+    }
+</style>
+
+</html>

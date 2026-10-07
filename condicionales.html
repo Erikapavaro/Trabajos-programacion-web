@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+
+<body>
+    <form id="miFormulario">
+        <label for="nombre"><b>Escribir tu nombre aqui:</b></label>
+        <br>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <br>
+        <br>
+        <label for="edad"><b>Escribe tu edad aqui:</b></label>
+        <br>
+        <input type="number" id="edad">
+        <br>
+        <br>
+        <label><b class="sex">Selecciona tu sexo:</b></label>
+        <br>
+        <input type="radio" id="femenino" name="sexo" value="Femenino"><b class="n">Femenino</b>
+        <br>
+        <input type="radio" id="masculino" name="sexo" value="Masculino"><b class="n">Masculino</b>
+        <br>
+        <br>
+        <button type="submit" id="btn">Enviar</button>
+        <p id="respuesta1"></p>
+    </form>
+</body>
+
+<script>
+    var btn = document.getElementById("btn");
+
+    btn.addEventListener('click', function (e) {
+        e.preventDefault(); 
+
+        var edad = Number(document.getElementById("edad").value);
+        
+        var sexoFemenino = document.getElementById("femenino").checked;
+        var sexoMasculino = document.getElementById("masculino").checked;
+
+        if (edad < 18 && sexoFemenino) {
+            document.getElementById("respuesta1").innerHTML = "<h2>Eres menor de edad y niña, vas para al cine a ver barbie</h2>";
+        } else if (edad < 18 && sexoMasculino) {
+            document.getElementById("respuesta1").innerHTML = "<h2>Eres menor de edad y niño, vas para al cine a ver cars</h2>";
+        } else if (edad >= 18 && sexoFemenino) {
+            document.getElementById("respuesta1").innerHTML = "<h2>Eres mayor de edad y mujer, vas para el antro</h2>";
+        } else if (edad >= 18 && sexoMasculino) {
+            document.getElementById("respuesta1").innerHTML = "<h2>Eres mayor de edad y hombre, vas para el billar</h2>";
+        } else {
+            document.getElementById("respuesta1").innerHTML = "<h2>Por favor, llena todos los datos correctamente.</h2>";
+        }
+    });
+</script>
+
+</html>

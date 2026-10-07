@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo-flor.png" type="image/x-icon">
+    <title>Boucket - Florería & Arreglos Especiales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="logo-flor.png" alt="Boucket Logo"
+                    onerror="this.src='https://cdn-icons-png.flaticon.com/512/3468/3468306.png'">
+                <span>Boucket</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#inicio" class="active">Inicio</a>
+                <a href="#sobre-nosotros">Sobre Nosotros</a>
+                <a href="#compra">Tienda</a>
+                <a href="#personalizado">Personalizado</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="inicio" class="hero">
+            <div class="hero-image-container">
+                <img src="fondo2.avif" alt="Fondo floral"
+                    onerror="this.src='https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1600&auto=format&fit=crop'">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-text">
+                <span class="badge">🌸 Hecho con amor y frescura 🌸</span>
+                <h1>Boucket Flower</h1>
+                <p>Transformamos sentimientos en arreglos florales inolvidables. Acompañamos los momentos más especiales
+                    de tu vida con la frescura, elegancia y el toque acogedor que solo la naturaleza puede brindar.</p>
+                <a href="#sobre-nosotros" class="btn-cute">Conócenos más 💕</a>
+            </div>
+        </section>
+
+        <section id="sobre-nosotros" class="about-section">
+            <div class="section-title">
+                <h2>Nuestra Historia & Esencia</h2>
+                <div class="title-underline">🌸</div>
+            </div>
+
+            <div class="grid-cards">
+                <div class="card card-pink">
+                    <div>
+                        <h3>Nuestra Misión</h3>
+                        <p>Crear y entregar arreglos florales de la más alta calidad, diseñados con pasión y
+                            creatividad. Queremos facilitar a nuestras familias y clientes la transmisión de emociones
+                            puras mediante un servicio cálido, ágil y confiable.</p>
+                    </div>
+
+                </div>
+
+                <div class="card card-purple">
+                    <div>
+                    <h3>Nuestra Visión</h3>
+                    <p>Consolidarnos como la florería en línea favorita por nuestra calidez familiar, la innovación en
+                        nuestros diseños y la frescura garantizada de nuestros productos, llevando alegría a cada
+                        rincón.</p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="professionalism-box">
+                <div class="prof-header">
+                    <h3>Nuestro Compromiso Profesional</h3>
+                </div>
+                <p class="prof-desc">
+                    Detrás de cada ramo hay un equipo apasionado de floristas y personal de logística enfocado en
+                    brindarte una experiencia impecable, cercana y entrañable.
+                </p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div>
+                            <h4>Frescura Garantizada</h4>
+                            <p>Seleccionamos flor por flor directamente de cultivos locales y certificados.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div>
+                            <h4>Diseño Exclusivo</h4>
+                            <p>Combinamos técnicas artesanales con un toque dulce, moderno y sofisticado.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div>
+                            <h4>Entregas Puntuales</h4>
+                            <p>Cuidamos que tu regalo llegue a tiempo y intacto a las manos de esa persona especial.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div>
+                            <h4>Atención Cercana</h4>
+                            <p>Te asesoramos personalmente para elegir el arreglo ideal para cada ocasión.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="values-section">
+                <h3>Valores que nos definen</h3>
+                <div class="values-tags">
+                    <span class="tag">🌷 Calidad Excepcional</span>
+                    <span class="tag">💖 Empatía y Amor</span>
+                    <span class="tag">🤝 Responsabilidad</span>
+                    <span class="tag">✨ Pasión Floral</span>
+                    <span class="tag">🏡 Calidez Familiar</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Con 💗 hecho para florecer sonrisas — <strong>Boucket Flower</strong> &copy; 2026</p>
+    </footer>
+</body>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Quicksand', sans-serif;
+        line-height: 1.6;
+    }
+
+    header {
+        width: 100%;
+        backdrop-filter: blur(8px);
+        height: 85px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    }
+
+    .header-container {
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff8eb;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+    }
+
+    .logo img {
+        height: 55px;
+        width: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    .logo:hover img {
+        transform: rotate(10deg) scale(1.05);
+    }
+
+    .logo span {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        color: palevioletred;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 25px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        padding: 8px 16px;
+        border-radius: 20px;
+        color: rgb(239, 170, 170);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: rgb(201, 24, 83);
+    }
+
+    .main-content {
+        margin-top: 85px;
+    }
+
+    .hero {
+        position: relative;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 40px 20px;
+    }
+
+    .hero-image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .hero-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-text {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(10px);
+        padding: 50px 30px;
+        border-radius: 30px;
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        margin: 20px;
+    }
+
+    .badge {
+        display: inline-block;
+        background-color: #ffe0e9;
+        padding: 6px 18px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .hero-text h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 48px;
+        margin-bottom: 20px;
+        font-weight: 800;
+    }
+
+    .hero-text p {
+        font-size: 19px;
+        margin-bottom: 30px;
+    }
+
+    .btn-cute {
+        display: inline-block;
+        color: rgb(249, 141, 242);
+        padding: 14px 32px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        box-shadow: 0 6px 18px rgba(232, 130, 157, 0.4);
+        transition: all 0.3s ease;
+    }
+
+    .btn-cute:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 22px rgba(232, 130, 157, 0.5);
+    }
+
+    .about-section {
+        max-width: 1100px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 36px;
+    }
+
+    .title-underline {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .grid-cards {
+        display: grid;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .card {
+        padding: 35px 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-pink {
+        border: 1px solid #ffd8e2;
+        background-color: #fce8c5;
+    }
+
+    .card-purple {
+        border: 1px solid #e7dcfe;
+    }
+
+    .card h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .professionalism-box {
+        background: white;
+        padding: 40px;
+        margin-bottom: 40px;
+        border: 1px solid #ffedf2;
+    }
+
+    .prof-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .prof-header h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+    }
+
+    .prof-desc {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .feature-icon {
+        background: #fff0f4;
+        padding: 12px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feature-item h4 {
+        font-size: 17px;
+        margin-bottom: 4px;
+    }
+
+    .feature-item p {
+        font-size: 14px;
+    }
+
+    .values-section {
+        text-align: center;
+        padding: 35px;
+        border: 1px solid #fce8c5;
+    }
+
+    .values-section h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .values-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .tag {
+        background: white;
+        padding: 10px 22px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .about-section img {
+        width: 150px;
+        height: 150px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 25px;
+        background-color: #fceee9;
+        font-size: 15px;
+        margin-top: 60px;
+    }
+</style>
+
+</html>
