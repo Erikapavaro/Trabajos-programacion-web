@@ -138,13 +138,13 @@
         var sexoMasculino = document.getElementById("masculino").checked;
 
         if (edad < 18 && sexoMasculino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>👦 Menor de 18 (Niño): Vas al Cine / Cars</h2>";
+            document.getElementById("respuesta1").innerHTML = "<h2> Menor de 18 (Niño): Vas al Cine / Cars</h2>";
         } else if (edad < 18 && sexoFemenino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>👧 Menor de 18 (Niña): Vas al Cine / Barbie</h2>";
+            document.getElementById("respuesta1").innerHTML = "<h2> Menor de 18 (Niña): Vas al Cine / Barbie</h2>";
         } else if (edad >= 18 && edad <= 30 && sexoMasculino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>👨 Entre 18 y 30 (Hombre): Vas al Gym / Beach</h2>";
+            document.getElementById("respuesta1").innerHTML = "<h2> Entre 18 y 30 (Hombre): Vas al Gym / Beach</h2>";
         } else if (edad >= 18 && edad <= 30 && sexoFemenino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>👩 Entre 18 y 30 (Mujer): Vas al Antro / Spa</h2>";
+            document.getElementById("respuesta1").innerHTML = "<h2> Entre 18 y 30 (Mujer): Vas al Antro / Spa</h2>";
         } else {
             document.getElementById("respuesta1").innerHTML = "<h2>⚠️ Edad fuera del rango establecido o datos incompletos.</h2>";
         }
