@@ -1,33 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Condicionales</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-size: 14px;
+            color: #555;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+
+        .radio-group {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .radio-label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+
+        .radio-label input {
+            margin-right: 6px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+
+        #respuesta1 {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        #respuesta1 h2 {
+            font-size: 15px;
+            margin: 0;
+            color: #2c3e50;
+        }
+    </style>
 </head>
 
 <body>
     <form id="miFormulario">
-        <label for="nombre"><b>Escribir tu nombre aqui:</b></label>
-        <br>
+        <label for="nombre"><b>Escribe tu nombre aquí:</b></label>
         <input type="text" id="nombre" placeholder="Nombre">
-        <br>
-        <br>
-        <label for="edad"><b>Escribe tu edad aqui:</b></label>
-        <br>
-        <input type="number" id="edad">
-        <br>
-        <br>
+
+        <label for="edad"><b>Escribe tu edad aquí:</b></label>
+        <input type="number" id="edad" placeholder="Edad">
+
         <label><b class="sex">Selecciona tu sexo:</b></label>
-        <br>
-        <input type="radio" id="femenino" name="sexo" value="Femenino"><b class="n">Femenino</b>
-        <br>
-        <input type="radio" id="masculino" name="sexo" value="Masculino"><b class="n">Masculino</b>
-        <br>
-        <br>
+        <div class="radio-group">
+            <label class="radio-label">
+                <input type="radio" id="femenino" name="sexo" value="Femenino"> Femenino
+            </label>
+            <label class="radio-label">
+                <input type="radio" id="masculino" name="sexo" value="Masculino"> Masculino
+            </label>
+        </div>
+
         <button type="submit" id="btn">Enviar</button>
-        <p id="respuesta1"></p>
+        <div id="respuesta1"></div>
     </form>
 </body>
 
@@ -35,22 +131,22 @@
     var btn = document.getElementById("btn");
 
     btn.addEventListener('click', function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
 
         var edad = Number(document.getElementById("edad").value);
         var sexoFemenino = document.getElementById("femenino").checked;
         var sexoMasculino = document.getElementById("masculino").checked;
 
         if (edad < 18 && sexoMasculino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>Menor de 18 y niño: Vas al Cine / Cars</h2>";
+            document.getElementById("respuesta1").innerHTML = "<h2>👦 Menor de 18 (Niño): Vas al Cine / Cars</h2>";
         } else if (edad < 18 && sexoFemenino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>Menor de 18 y niña: Vas al Cine / Barbie</h2>";
+            document.getElementById("respuesta1").innerHTML = "<h2>👧 Menor de 18 (Niña): Vas al Cine / Barbie</h2>";
         } else if (edad >= 18 && edad <= 30 && sexoMasculino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>Entre 18 y 30 y hombre: Vas al Gym / Beach</h2>";
+            document.getElementById("respuesta1").innerHTML = "<h2>👨 Entre 18 y 30 (Hombre): Vas al Gym / Beach</h2>";
         } else if (edad >= 18 && edad <= 30 && sexoFemenino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>Entre 18 y 30 y mujer: Vas al Antro / Spa</h2>";
+            document.getElementById("respuesta1").innerHTML = "<h2>👩 Entre 18 y 30 (Mujer): Vas al Antro / Spa</h2>";
         } else {
-            document.getElementById("respuesta1").innerHTML = "<h2>Edad fuera del rango establecido o datos incompletos.</h2>";
+            document.getElementById("respuesta1").innerHTML = "<h2>⚠️ Edad fuera del rango establecido o datos incompletos.</h2>";
         }
     });
 </script>
