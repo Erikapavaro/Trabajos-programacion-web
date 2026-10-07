@@ -38,20 +38,19 @@
         e.preventDefault(); 
 
         var edad = Number(document.getElementById("edad").value);
-        
         var sexoFemenino = document.getElementById("femenino").checked;
         var sexoMasculino = document.getElementById("masculino").checked;
 
-        if (edad < 18 && sexoFemenino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>Eres menor de edad y niña, vas para al cine a ver barbie</h2>";
-        } else if (edad < 18 && sexoMasculino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>Eres menor de edad y niño, vas para al cine a ver cars</h2>";
-        } else if (edad >= 18 && sexoFemenino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>Eres mayor de edad y mujer, vas para el antro</h2>";
-        } else if (edad >= 18 && sexoMasculino) {
-            document.getElementById("respuesta1").innerHTML = "<h2>Eres mayor de edad y hombre, vas para el billar</h2>";
+        if (edad < 18 && sexoMasculino) {
+            document.getElementById("respuesta1").innerHTML = "<h2>Menor de 18 y niño: Vas al Cine / Cars</h2>";
+        } else if (edad < 18 && sexoFemenino) {
+            document.getElementById("respuesta1").innerHTML = "<h2>Menor de 18 y niña: Vas al Cine / Barbie</h2>";
+        } else if (edad >= 18 && edad <= 30 && sexoMasculino) {
+            document.getElementById("respuesta1").innerHTML = "<h2>Entre 18 y 30 y hombre: Vas al Gym / Beach</h2>";
+        } else if (edad >= 18 && edad <= 30 && sexoFemenino) {
+            document.getElementById("respuesta1").innerHTML = "<h2>Entre 18 y 30 y mujer: Vas al Antro / Spa</h2>";
         } else {
-            document.getElementById("respuesta1").innerHTML = "<h2>Por favor, llena todos los datos correctamente.</h2>";
+            document.getElementById("respuesta1").innerHTML = "<h2>Edad fuera del rango establecido o datos incompletos.</h2>";
         }
     });
 </script>
